@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/guillaume-flambard/.github/blob/main/SECURITY.md
+    about: Never put exploit detail in a public issue. See the reporting path.

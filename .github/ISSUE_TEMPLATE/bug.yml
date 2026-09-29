@@ -1,0 +1,54 @@
+name: Bug report
+description: Something behaved differently from what it says it does.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is the default template for repositories that do not define their own.
+        A repository with a specific gate will document it in its own CONTRIBUTING.md.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: The exact version, tag, or commit sha you ran.
+      placeholder: v0.3.1, or a1b2c3d
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Runtime, operating system, and anything that is not the default.
+      placeholder: Node 22.13, macOS 15, pnpm 11 via corepack
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you observed. Facts, not interpretation.
+    validations:
+      required: true
+  - type: textarea
+    id: what-expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Smallest reproduction you have
+      description: A command, a fixture, a diff. A smaller reproduction is a faster fix.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you send
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: This is a defect report, not a design proposal. Design belongs in Discussions.
+          required: false
